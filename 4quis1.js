@@ -1,3 +1,4 @@
+//nomor1.1
 const main = () => {
 
     const user = {
@@ -37,7 +38,7 @@ const main = () => {
 }
 
 main();
-
+// nomor 1.2
 function classs() {
     class user {
         constructor(name, age, full_address) {
