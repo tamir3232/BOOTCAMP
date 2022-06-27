@@ -145,6 +145,25 @@ const readTextConcurrent = async() => {
     }
 }
 
+const searchProducts = (name) => {
+    try {
+        const products = ["baju uniqlo", "baju abc", "tas tidak braded"]
+
+        const results = products.filter(value => {
+            return value.includes(name)
+        })
+
+        if (results.length === 0) {
+            throw new Error('product not found')
+        }
+
+        return results
+    } catch (error) {
+        return error
+    }
+}
+
+console.log(searchProducts("sepatu"))
 
 
 // readTextCallback()
