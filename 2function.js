@@ -6,5 +6,7 @@ function luassegitiga(alas, tinggi) {
     return luas;
 
 }
+//komponen function
+// parameter, prosedure, return
 
 console.log(luassegitiga(3, 4)) // cara outputkan function
