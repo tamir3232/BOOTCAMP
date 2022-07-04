@@ -4,7 +4,7 @@ const main = () => {
     const user = {
         full_name: "udin",
         age: 20,
-        hobbies: ["game", "read"],
+        hobbies: ["Playing game", "read Book"],
         full_address: "jl merpati ",
 
         getName: function() {
