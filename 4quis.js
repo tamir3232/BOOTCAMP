@@ -109,10 +109,10 @@ transaction.total_amount = transaction.items.reduce(
     0
 )
 
-// console.log(transaction.getInvoice())
-// console.log("\n" + "My Money Rp." + transaction.total_payment)
-// console.log("\n" + "My bill Rp." + transaction.total_amount)
-// console.log("\n" + transaction.getChange())
+console.log(transaction.getInvoice())
+console.log("\n" + "My Money Rp." + transaction.total_payment)
+console.log("\n" + "My bill Rp." + transaction.total_amount)
+console.log("\n" + transaction.getChange())
 
 // nomer 2 class
 class Transaction {
