@@ -59,3 +59,9 @@ const mobil = new Kendaraan("putih", "honda", "hitam", { jumlah: 4, ketebalan: "
 console.log(mobil.jalankan(30))
 const motor = new Kendaraan("hitam", "yamaha", "", { jumlah: 2, ketebalan: "2cm" })
 console.log(motor.jalankan(50))
+
+// var foo = []
+
+// foo.push(1)
+// foo.push(2)
+// console.log(foo[2])

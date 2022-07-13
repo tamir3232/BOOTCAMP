@@ -1,0 +1,24 @@
+{
+    "name": "bootcamp",
+    "version": "1.0.0",
+    "description": "first App",
+    "main": "6firstnode.js",
+    "scripts": {
+        "start": "node 6firstnode.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tamir3232/BOOTCAMP.git"
+    },
+    "dependencies": {
+        "express": "^4.18.1"
+    },
+
+
+    "author": "TAMIR RUSYDI HEGA ",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tamir3232/BOOTCAMP/issues"
+    },
+    "homepage": "https://github.com/tamir3232/BOOTCAMP#readme"
+}
