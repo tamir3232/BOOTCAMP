@@ -26,10 +26,7 @@ app.get("/users", (req, res, next) => {
     //jika ada maka return data
     //tjika tidak ada return status code 404
     //retunr variabel
-    for (var i = 0, j = 1; i < users.length; i++) {
-        users[i].id = j;
-        j++;
-    }
+
     if (users && users.length > 0) {
         return res.status(200).json({
             data: users,
@@ -78,14 +75,20 @@ app.patch("/users/:id", (req, res, next) => {
             message: "user tidak di temukan",
         });
     }
+    console.log(status);
 
-    for (var i = 0; i < users.length; i++) {
-        if (users[i].id === id) {
-            users[i].full_name = req.body.full_name;
-            users[i].address = req.body.address;
-            users[i].age = req.body.age;
-        }
-    }
+    //logika dasarnya
+    // for (var i = 0; i < users.length; i++) {
+    //     if (users[i].id === id) {
+    //         users[i].full_name = req.body.full_name;
+    //         users[i].address = req.body.address;
+    //         users[i].age = req.body.age;
+    //     }
+    // }
+
+    status.full_name = req.body.full_name;
+    status.address = req.body.address;
+    status.age = req.body.age;
 
     fs.writeFileSync(path, JSON.stringify(users));
     return res.status(201).json({
@@ -108,15 +111,14 @@ app.delete("/users/:id", (req, res, next) => {
         });
     }
 
-    for (var i = 0; i < users.length; i++) {
-        if (users[i].id === id) {
-            users.splice(i, 1);
-        }
-    }
-    for (var i = 0, j = 1; i < users.length; i++) {
-        users[i].id = j;
-        j++;
-    }
+    // for (var i = 0; i < users.length; i++) {
+    //     if (users[i].id === id) {
+    //         users.splice(i, 1);
+    //     }
+    // }
+
+    const index = users.findIndex((e) => e.id === status.id);
+    users.splice(index, 1); //sebagai berapa buah item yang di hapus
 
     fs.writeFileSync(path, JSON.stringify(users));
     return res.status(201).json({
